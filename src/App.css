@@ -1,5 +1,18 @@
 .App {
-  text-align: center;
+  width: 100%;
+}
+
+container {
+  display: flex;
+}
+
+Animation-div {
+  display: flex;
+}
+
+Form-div {
+  display: block;
+  padding: 20px;
 }
 
 .App-logo {

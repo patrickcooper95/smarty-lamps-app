@@ -2,17 +2,16 @@
   width: 100%;
 }
 
-container {
+.Animation-div {
+  align-items: center;
   display: flex;
+  justify-content: center;
 }
 
-Animation-div {
-  display: flex;
-}
-
-Form-div {
-  display: block;
+.Form-div {
+  align-items: center;
   padding: 20px;
+  width: 100%;
 }
 
 .App-logo {

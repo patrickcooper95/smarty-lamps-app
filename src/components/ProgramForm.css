@@ -1,0 +1,30 @@
+.monospace {
+  font-family: "Lucida Console", Courier, monospace;
+}
+
+.ProgramForm-div {
+  padding: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: monospace;
+}
+
+form {
+  width: 30%;
+  min-width: 200px;
+  font-family: inherit;
+}
+
+input {
+  width: 100%;
+}
+
+input[type=text] {
+  background-color: #232b2b;
+  color: #808080;
+  padding: 12px 20px;
+  /*margin: 8px 0;*/
+  border: 1px solid #808080;
+  border-radius: 4px;
+}

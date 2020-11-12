@@ -5,12 +5,12 @@ import MyForm from './components/ProgramForm.js';
 
 function App() {
   return (
-    <container>
-      <div className="Form-div">
-        <h1>Hello World</h1>
+    <div class="Form-div">
+      <MyForm />
+      <div class="Animation-div">
+        <Animation />
       </div>
-      <Animation />
-    </container>
+    </div>
 
   );
 }

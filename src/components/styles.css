@@ -31,11 +31,12 @@ body,
 }
 
 .script-bf-box {
-  width: 300px;
+  width: 20%;
   height: 10px;
   background: white;
   margin: 5px;
   will-change: transform;
+  display: inline-block;
 }
 
 .script-bf-box:hover {

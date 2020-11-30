@@ -11,7 +11,9 @@
     "react-dom": "^17.0.1",
     "react-scripts": "4.0.0",
     "react-spring": "^8.0.27",
-    "web-vitals": "^0.2.4"
+    "web-vitals": "^0.2.4",
+    "semantic-ui-css": "^2.4.1",
+    "semantic-ui-react": "^0.88.2"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -25,7 +27,7 @@
       "react-app/jest"
     ]
   },
-  "proxy": "http://localhost:5000",
+  "proxy": "http://192.168.1.235:5000",
   "browserslist": {
     "production": [
       ">0.2%",

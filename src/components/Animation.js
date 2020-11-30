@@ -4,7 +4,7 @@ import { useSpring, animated } from 'react-spring'
 import range from 'lodash-es/range'
 import './styles.css'
 
-const items = range(4)
+const items = range(3)
 const interp = i => r => `translate3d(0, ${15 * Math.sin(r + (i * 2 * Math.PI) / 1.6)}px, 0)`
 
 function Animation() {
@@ -17,7 +17,7 @@ function Animation() {
     reset: true,
   })
   return items.map(i => <animated.div key={i} className="script-bf-box"
-  style={{ transform: radians.interpolate(interp(i))}} />)
+  style={{ "transform": radians.interpolate(interp(i)), "background-color": "orange" }} />)
 }
 
 export default Animation

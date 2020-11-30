@@ -1,8 +1,7 @@
 import React, { useEffect, useState } from 'react';
-import logo from './logo.svg';
 import './App.css';
 import Animation from './components/Animation.js';
-import ProgramForm from './components/ProgramForm.js';
+import { ProgramForm } from './components/ProgramForm.js';
 
 function App() {
 

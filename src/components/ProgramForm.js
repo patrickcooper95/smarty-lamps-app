@@ -1,34 +1,39 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
+import React, { useState } from "react";
+import { Form, Input, Button } from "semantic-ui-react";
 import './ProgramForm.css';
 
-class ProgramForm extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {value: ''};
+export const ProgramForm = () => {
+  const [program, setProgram] = useState("");
 
-    this.handleChange = this.handleChange.bind(this);
-    this.handleSubmit = this.handleSubmit.bind(this);
-  }
+  return (
+    <Form>
+      <Form.Field className="input-field">
+        <Input
+          value={program}
+          onChange={e => setProgram(e.target.value)}
+        />
+      </Form.Field>
+      <Form.Field>
+        <Button
+          onClick={async () => {
+            const effect = { program };
+            const response = await fetch("/effects/desk-led", {
+              method: "PUT",
+              headers: {
+                "Content-Type": "application/json"
+              },
+              body: JSON.stringify(effect)
+            });
 
-  handleChange(event) {
-    this.setState({value: event.target.value});
-  }
-
-  handleSubmit(event) {
-    alert('A name was submitted: ' + this.state.value);
-    event.preventDefault();
-  }
-
-  render() {
-    return (
-      <div class="ProgramForm-div">
-        <form onSubmit={this.handleSubmit}>
-            <input type="text" value={this.state.value} onChange={this.handleChange} />
-        </form>
-      </div>
-    );
-  }
-}
-export default ProgramForm
-//ReactDOM.render(<MyForm />, document.getElementById('root'));
+            if (response.ok) {
+              console.log("Successful response received!");
+              setProgram("");
+            }
+          }}
+        >
+          O
+        </Button>
+      </Form.Field>
+    </Form>
+  );
+};

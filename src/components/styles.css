@@ -31,8 +31,8 @@ body,
 }
 
 .script-bf-box {
-  width: 20%;
-  height: 10px;
+  width: 5%;
+  height: 100px;
   background: white;
   margin: 5px;
   will-change: transform;

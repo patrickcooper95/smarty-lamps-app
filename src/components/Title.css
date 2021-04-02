@@ -1,0 +1,13 @@
+/*  src/components/Title.css  */
+.Title {
+  box-sizing: border-box;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 1em;
+  margin-bottom: 2em;
+  box-shadow: 12px 12px 12px rgba(80, 0, 226, .4);
+  background-color: rgb(130, 20, 150);
+  color: #fff;
+  font-family: AbeeZee;
+}

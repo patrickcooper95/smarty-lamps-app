@@ -1,19 +1,39 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
+import React, { useState } from "react";
+import { Form, Input, Button } from "semantic-ui-react";
 import './ProgramForm.css';
 
-class MyForm extends React.Component {
-  render() {
-    return (
-      <div class="ProgramForm-div">
-        <form>
-          <input
-            type="text"
-          />
-        </form>
-      </div>
-    );
-  }
-}
-export default MyForm
-//ReactDOM.render(<MyForm />, document.getElementById('root'));
+export const ProgramForm = () => {
+  const [program, setProgram] = useState("");
+
+  return (
+    <Form>
+      <Form.Field className="input-field">
+        <Input
+          value={program}
+          onChange={e => setProgram(e.target.value)}
+        />
+      </Form.Field>
+      <Form.Field>
+        <Button
+          onClick={async () => {
+            const effect = { program };
+            const response = await fetch("/effects/desk-led", {
+              method: "PUT",
+              headers: {
+                "Content-Type": "application/json"
+              },
+              body: JSON.stringify(effect)
+            });
+
+            if (response.ok) {
+              console.log("Successful response received!");
+              setProgram("");
+            }
+          }}
+        >
+          O
+        </Button>
+      </Form.Field>
+    </Form>
+  );
+};

@@ -2,22 +2,30 @@
   font-family: "Lucida Console", Courier, monospace;
 }
 
-.ProgramForm-div {
+Button {
+  padding: 10px;
+  background-color: #232b2b;
+  border-width: 1px;
+  border-radius: 5px;
+  border-style: solid;
+  border-color: #808080;
+  color: #808080;
+}
+
+form.ui.form {
   padding: 60px;
   display: flex;
   justify-content: center;
   align-items: center;
   font-family: monospace;
+  width: 100%;
 }
 
-form {
+.input-field {
   width: 30%;
   min-width: 200px;
   font-family: inherit;
-}
-
-input {
-  width: 100%;
+  padding: 10px;
 }
 
 input[type=text] {
@@ -27,4 +35,5 @@ input[type=text] {
   /*margin: 8px 0;*/
   border: 1px solid #808080;
   border-radius: 4px;
+  width: 100%;
 }

@@ -31,6 +31,7 @@ body,
 }
 
 .script-bf-box {
+  border-radius: 20px;
   width: 5%;
   height: 100px;
   background: white;

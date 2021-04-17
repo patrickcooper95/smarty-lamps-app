@@ -26,8 +26,12 @@ export const ProgramForm = () => {
             });
 
             if (response.ok) {
-              console.log("Successful response received!");
+              console.log("Successfully set desk-led to " + program);
               setProgram("");
+              var elements = document.getElementsByClassName('script-bf-box');
+              for (const x of Array(5).keys()) {
+                elements[x].style.backgroundColor = program;
+              }
             }
           }}
         >

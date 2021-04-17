@@ -1,5 +1,5 @@
 import ReactDOM from 'react-dom'
-import React, { useState, useEffect } from 'react'
+import React from 'react'
 import { useSpring, animated } from 'react-spring'
 import range from 'lodash-es/range'
 import './styles.css'

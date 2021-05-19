@@ -37,3 +37,18 @@ input[type=text] {
   border-radius: 4px;
   width: 100%;
 }
+
+input:hover {
+  border: none;
+  box-shadow: 0 0px 15px rgba(255, 255, 255, .8);
+}
+
+input:focus {
+  outline: none;
+}
+
+Button:hover {
+  border: none;
+  box-shadow: 0 0px 15px rgba(255, 255, 255, .8);
+  color: #232b2b;
+}

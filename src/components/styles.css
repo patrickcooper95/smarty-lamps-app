@@ -42,4 +42,5 @@ body,
 
 .script-bf-box:hover {
   background: hotpink;
+  box-shadow: 0 0px 15px rgba(255, 255, 255, .8);
 }
